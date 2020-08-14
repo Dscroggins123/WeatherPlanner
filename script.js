@@ -35,7 +35,7 @@ $(searchButton).on("click", function(event){
         Saved()
         console.log(response.weather[0].icon )
         var temperature = (response.main.temp - 273.15) * (1.8) + 32 
-        $("#cityName").html(response.name + currentDate + "<img src=http://openweathermap.org/img/wn/" + response.weather[0].icon + ".png" + ">")
+        $("#cityName").html(response.name + " " + currentDate + "<img src=http://openweathermap.org/img/wn/" + response.weather[0].icon + ".png" + ">")
         $("#cityName")
         $("#temperature").html("Temperature: " + temperature + " &#8457;") 
         $("#humidity").html("Humidity: " + response.main.humidity + " %")
@@ -57,9 +57,9 @@ $(searchButton).on("click", function(event){
     }).then(function(secondResponse){
         secondResponse.daily.forEach((day, i) => {
             if(i < 5){
-                $("#fiveday").append(`<div class="card col-2">
+                $("#fiveday").append(`<div class="card col-2" style="width: 50px;" style="height: 100px; text-align:left;">
                 <div class="card-body">
-                  <h5 class="card-title date" >${currentDate.replace(/\/(.+)\//, a=> `/${+a.replace(/\//g, "")+i+1}/`)}</h5>
+                  <h5 class="card-title date" style="width:80px;font-size:17px">${currentDate.replace(/\/(.+)\//, a=> `/${+a.replace(/\//g, "")+i+1}/`)}</h5>
                   <h6 class="card-subtitle mb-2 text-muted temperature" >${day.temp.day + " &#8457;"}</h6>
                   <p class="card-text humidity">${day.humidity + " %"}</p>
                   

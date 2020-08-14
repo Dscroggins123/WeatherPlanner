@@ -1,0 +1,58 @@
+.container{
+    
+    
+    
+}
+#header {
+    text-align: center;
+    background-color:rgb(42, 42, 44) ;
+    color: white;
+    height: 60px;
+    
+    font-size: 40px;
+}
+input{
+    vertical-align: bottom;
+    font-size: 18px;
+    margin-top: 1%;
+    height: 25px;
+    
+    
+}
+button {
+    background-image:url('https://www.pngfind.com/pngs/m/432-4323226_search-icon-transparent-search-button-png-png-download.png'   );
+    background-size:cover;
+    background-position: center;
+    height: 32px;
+    width: 35px;
+    vertical-align: bottom
+    
+    
+}
+
+#cities{
+    width: 35%;
+    margin-top: 10%;
+    margin-left: 4%;
+    font-family: 'Open Sans', sans-serif;
+
+    
+}
+
+.col-md-3{
+    
+    background-color: rgba(241, 240, 240, 0.925);
+    
+    
+    
+    
+}
+.col-md-9{
+    
+    background-color: white;
+    padding-top: 1%;
+    padding-left: 3%;
+    
+    
+    
+}

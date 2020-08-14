@@ -27,10 +27,11 @@ input{
 }
 
 #cities{
-    width: 35%;
-    margin-top: 10%;
-    margin-left: 4%;
+    width: 45%;
+    margin-top: 5%;
+    
     font-family: 'Open Sans', sans-serif;
+    background-color: white;
 
     
 }

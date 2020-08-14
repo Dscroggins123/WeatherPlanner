@@ -1,8 +1,7 @@
 
 
 var searchButton = $("#searchButton")
-var currentTime = new Date().getHours()
-console.log(currentTime)
+
 
 $(searchButton).on("click", function(event){
     event.preventDefault();
@@ -13,6 +12,7 @@ $(searchButton).on("click", function(event){
     
      
     localStorage.setItem("cities", JSON.stringify(inputCity) );
+    var cities = JSON.parse(localStorage.getItem('cities'))
     
     
     var ourQueryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + inputCity + "&APPID=98c6bb55a308a516a74756820c25e107";
@@ -49,6 +49,10 @@ $(searchButton).on("click", function(event){
 
 }
 
+function fiveDayForecast (){
+
+}
+$("#cities").append("<br>" + cities)
 
 
     

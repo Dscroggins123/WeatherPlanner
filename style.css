@@ -1,8 +1,4 @@
-.container{
-    
-    
-    
-}
+
 #header {
     text-align: center;
     background-color:rgb(42, 42, 44) ;
@@ -19,7 +15,7 @@ input{
     
     
 }
-button {
+#searchButton {
     background-image:url('https://www.pngfind.com/pngs/m/432-4323226_search-icon-transparent-search-button-png-png-download.png'   );
     background-size:cover;
     background-position: center;

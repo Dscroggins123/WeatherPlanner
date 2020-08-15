@@ -57,11 +57,12 @@ $(searchButton).on("click", function(event){
     }).then(function(secondResponse){
         secondResponse.daily.forEach((day, i) => {
             if(i < 5){
-                $("#fiveday").append(`<div class="card col-2" style="width: 50px;" style="height: 100px; text-align:left;">
-                <div class="card-body">
-                  <h5 class="card-title date" style="width:80px;font-size:17px">${currentDate.replace(/\/(.+)\//, a=> `/${+a.replace(/\//g, "")+i+1}/`)}</h5>
-                  <h6 class="card-subtitle mb-2 text-muted temperature" >${day.temp.day + " &#8457;"}</h6>
-                  <p class="card-text humidity">${day.humidity + " %"}</p>
+                $("#fiveday").append(`<div class="card col-2" style="width: 70px;height: 150px;" style="height: 100px;" >
+                <div>
+                  <h5 class="card-title date" style="font-size:15px">${currentDate.replace(/\/(.+)\//, a=> `/${+a.replace(/\//g, "")+i+1}/`)}</h5>
+                  
+                  <p class="card-text temperature" style="font-size:12px" >${"Temp: " + day.temp.day + "&#8457;"}</h6>
+                  <p class="card-text humidity" style="font-size:12px"> ${"Humidity: " + day.humidity + "%"}</p>
                   
                 </div>
               </div>`)
@@ -71,8 +72,8 @@ $(searchButton).on("click", function(event){
         $("#UV").html("UV Index: " + secondResponse.current.uvi)
         
     })
-
 }
+
 
 
 
